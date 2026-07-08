@@ -62,7 +62,7 @@ public class Main {
                     continue;
                 }
 
-                // 1. Handle Payment Object
+                //  Handle Payment Object
                 System.out.println("\n1. Cash\n2. Card");
                 System.out.print("Select Payment Method: ");
                 int payChoice = scanner.nextInt();
@@ -75,7 +75,7 @@ public class Main {
                     payment = new CashPayment();
                 }
 
-                System.out.println("\n1. Email  |  2. SMS  |  3. Both");
+                System.out.println("\n1. Email\n2. SMS\n3. Both");
                 System.out.print("Select Notification Channel: ");
                 int notificationChoice = scanner.nextInt();
 
