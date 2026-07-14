@@ -19,8 +19,12 @@ public class Main {
         Menu restaurantMenu = new Menu(menuList);
 
         // Set up customer and checkout service
-        Customer customer = new Customer("Ali", "ali123@email.com", "01122223333");
-        CheckoutService checkout = new CheckoutService();
+        Customer.Builder builder = new Customer.Builder();
+        builder.setName("Ali")
+                .setEmail("ali123@email.com")
+                .setPhoneNumber("01122223333");
+        Customer customer = builder.build();
+        CheckoutService checkout = CheckoutService.getInstance();
         Order currentOrder = new Order(customer);
 
         // The main loop

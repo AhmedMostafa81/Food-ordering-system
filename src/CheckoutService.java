@@ -3,6 +3,17 @@ import java.util.List;
 
 public class CheckoutService {
 
+    private static CheckoutService instance;
+
+    private CheckoutService() {}
+
+    public static CheckoutService getInstance() {
+        if (instance == null) {
+            instance = new CheckoutService();
+        }
+        return instance;
+    }
+
     public void processCheckout(Order order, Payment paymentMethod, List<Notification> channels) {
 
         order.displayOrderSummary();
